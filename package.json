@@ -1,6 +1,6 @@
 {
   "name": "greyatom-ide-welcome",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Welcome users to Commit Live with useful information",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
