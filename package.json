@@ -20,6 +20,8 @@
     "LoginView": "createLoginView"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "etch": "0.9.0"
   },
   "standard": {

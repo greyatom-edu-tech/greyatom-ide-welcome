@@ -1,0 +1,238 @@
+
+@text-color: #333;
+.ga-ide {
+	background: #fff;
+	font-size: 14px;
+
+	@import "../node_modules/bootstrap/less/bootstrap.less";
+	@import "../node_modules/font-awesome/less/font-awesome.less";
+
+	@font-face {
+	  font-family: 'Glyphicons Halflings';
+	  src: url('atom://greyatom-ide-welcome/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
+	  src: url('atom://greyatom-ide-welcome/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+	       url('atom://greyatom-ide-welcome/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+	       url('atom://greyatom-ide-welcome/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'),
+	       url('atom://greyatom-ide-welcome/node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+	}
+	@font-face {
+	  font-family: 'FontAwesome';
+	  src: url('atom://greyatom-ide-welcome/node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=');
+	  src: url('atom://greyatom-ide-welcome/node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	    url('atom://greyatom-ide-welcome/node_modules/font-awesome/fonts/fontawesome-webfont.woff2') format('woff2'),
+	    url('atom://greyatom-ide-welcome/node_modules/font-awesome/fonts/fontawesome-webfont.woff') format('woff'),
+	    url('atom://greyatom-ide-welcome/node_modules/font-awesome/fonts/fontawesome-webfont.ttf') format('truetype'),
+	    url('atom://greyatom-ide-welcome/node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=#fontawesomeregular') format('svg');
+	  // src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	.container-panel{
+		padding: 15px 30px;
+
+		.welcome-msg-ide{
+			margin-bottom: 15px;
+
+			 .welcome-block{
+				display: inline-block;
+				width: inherit;
+				padding-right: 5px;
+				color: #666;
+
+				&.user-name{
+					color: darken(@text-color, 5%);
+				}
+			}
+		}
+		.content-wrapper{
+			width: 100%;
+
+			.panel{
+				.panel-heading{
+					font-weight: bold;
+					font-size: 14px;
+					text-transform: uppercase;
+					color: @text-color;
+				}
+				.table{
+					margin-bottom: 0
+				}
+			}
+			.last-viewed{
+				.media{
+					width: 80%;
+					float: left;
+
+					.media-body{
+						vertical-align: middle;
+					}
+					.activity-icon{
+						font-size: 60px;
+						color: #555;
+					}
+					.activity-title{
+						float: left;
+						position: relative;
+						left: 10px;
+						font-size: 15px;
+						color: #333;
+					}
+				}
+				.activity-btn{
+					float: right;
+					margin-top: 15px;
+					margin-right: 5px;
+				}
+				.panel-body{
+					padding: 25px 15px;
+
+					&:after{
+						clear: both;
+						display: block;
+						content: '';
+					}
+				}
+			}
+			.bottom-links-row{
+				margin-top: 30px;
+			}
+			.course-progress{
+				padding-bottom: 0;
+				min-height: 160px;
+				position: relative;
+
+				.graph-h{
+					margin-bottom: 15px;
+					font-weight: bold;
+					margin-top: 0;
+					text-align: center;
+				}
+				.total-progress-graph{
+					margin: 0 0 0 20px;
+				}
+				.progress-count-row{
+					margin-top: 20px;
+					padding-right: 50px;
+					padding-left: 50px;
+
+					.count-block{
+						margin: 0 130px;
+
+						// &:first-child{
+						// 	margin-left: 0;
+						// }
+					}
+					.count-box{
+						width: 100%;					
+						margin: 0 auto;
+						text-align: center;
+						border-width: 1px;
+						border-style: solid;
+
+						.count-no{
+							font-size: 46px;
+						}
+						.box-h{
+							padding: 2px 0 1px;
+							// font-size: 90%;
+							color: #fff;
+						}
+						&.assignments-completed{
+							border-color: #4cae4c;
+
+							.count-no{
+								color: #4cae4c;
+							}
+							.box-h{
+								background: #5cb85c;
+							}
+						}
+						&.quizzes-completed{
+							border-color: #46b8da;
+							.count-no{
+								color: #46b8da;
+							}
+							.box-h{
+								background: #5bc0de;
+							}
+						}
+						&.points-earned{
+							border-color: #eea236;
+							.count-no{
+								color: #eea236;
+							}
+							.box-h{
+								background: #f0ad4e;
+							}
+						}
+					}				
+				}
+				
+				.course-not-started{
+					position: absolute;
+				    background-color: rgba(51, 51, 51, 0.80);
+				    z-index: 1;
+				    content: '';
+				    top: 0;
+				    bottom: 0;
+				    left: 0;
+				    right: 0;
+				    clear: both;
+				    display: block;
+
+				    .title{
+						position: absolute;
+					    z-index: 45;
+					    color: #fff;
+					    font-size: 18px;
+					    top: 0;
+					    left: 0;
+					    right: 0;
+					    bottom: 0;
+					    line-height: 205px;
+					    text-align: center;
+					}
+				}
+			}
+			.content-box{
+				width: 50%;
+				float: left;
+
+				.content-box-ins{
+					border: 1px solid #ddd;
+					margin: 0 10px;
+					border-radius: 3px;
+
+					.header{
+						float: left;
+						width: 100%;
+						background: #f1f1f1;
+						padding: 10px 10px;
+
+						.header-title{
+							margin: 0;
+						}
+					}
+				}
+			}
+			.helpful-links{
+				max-height: 200px;
+				overflow-y: auto;
+
+				ul{
+					padding-left: 0;
+
+					li{
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+		&:after{
+			display: block;
+		    content: '';
+		    clear: both;
+		}
+	}
+}
