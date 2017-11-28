@@ -3,15 +3,10 @@
   "version": "0.0.1",
   "description": "Welcome users to Commit Live with useful information",
   "main": "./lib/main",
-  "atomTestRunner": "atom-mocha-test-runner",
   "repository": "https://github.com/greyatom-edu-tech/greyatom-ide-welcome",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
-  },
-  "scripts": {
-    "lint": "standard",
-    "test": "atom --test test/*.test.js"
   },
   "configSchema": {
     "showOnStartup": {
@@ -21,16 +16,11 @@
     }
   },
   "deserializers": {
-    "WelcomeView": "createWelcomeView",
-    "GuideView": "createGuideView",
-    "ConsentView": "createConsentView"
+    "SettingsView": "createSettingsView",
+    "LoginView": "createLoginView"
   },
   "dependencies": {
     "etch": "0.9.0"
-  },
-  "devDependencies": {
-    "atom-mocha-test-runner": "^1.0.0",
-    "standard": "^8.6.0"
   },
   "standard": {
     "globals": [
