@@ -1,5 +1,9 @@
 
 @text-color: #333;
+// body{
+// 	-webkit-font-smoothing: antialiased;
+//     text-rendering: optimizeLegibility;
+// }
 .ga-ide {
 	background: #fff;
 	font-size: 14px;
@@ -48,6 +52,7 @@
 		.content-wrapper{
 			width: 100%;
 
+			// Overview Panel Code starts
 			.panel{
 				.panel-heading{
 					font-weight: bold;
@@ -116,6 +121,10 @@
 					padding-right: 50px;
 					padding-left: 50px;
 
+					.center-box{
+						float: none;
+    					margin: 0 auto;
+					}
 					.count-block{
 						margin: 0 130px;
 
@@ -226,6 +235,82 @@
 					li{
 						margin-bottom: 5px;
 					}
+				}
+			}
+
+			// Projects Panel Code starts
+			&.project-list{
+				color: #333;
+				float: left;
+
+				.search-project-box{
+					margin-bottom: 15px;
+				}
+
+				.table{
+					th, td{
+						white-space: inherit;
+						vertical-align: middle;
+					}
+
+					.glyphicon{
+						margin-left: 18px;
+						position: relative;
+
+						&.gacomplete-chapt-incomplete {
+						    // position: absolute;
+						    color: #ccc;
+						    border: 2px solid #ccc;
+						    -webkit-border-radius: 50%;
+						    border-radius: 50%;
+						    font-size: .7rem;
+						    padding: 1px;
+						    overflow: hidden;
+						    width: 14px;
+						    height: 14px;
+						    text-indent: 100px;
+						    background-color: transparent;
+						}
+						
+						&.gacomplete-chapt {
+						    // position: relative;
+						    color: #ccc;
+						    border: 2px solid #ccc;
+						    -webkit-border-radius: 50%;
+						    border-radius: 50%;
+						    font-size: .7rem;
+						    padding: 1px;
+						    overflow: hidden;
+						    width: 14px;
+						    height: 14px;
+						    text-indent: 100px;
+						    background-color: transparent;
+						}
+					}
+					.completed {
+						.gacomplete-chapt{
+						    color: #fff;
+						    background-color: #5cb85c;
+						    border-color: #5cb85c;
+						    text-indent: 0;
+						}
+					}
+					.current {
+						.gacomplete-chapt{
+						    color: #fff;
+						    background-color: #5bc0de;
+						    border-color: #5bc0de;
+						    text-indent: 0;
+						}
+					}
+					.project-points{
+						color: #5988bb;
+					}
+				}
+				&:after{
+					clear: both;
+					content: '';
+					display: block;
 				}
 			}
 		}
