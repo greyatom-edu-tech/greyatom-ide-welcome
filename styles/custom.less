@@ -4,6 +4,36 @@
 // 	-webkit-font-smoothing: antialiased;
 //     text-rendering: optimizeLegibility;
 // }
+.config-menu{
+	.nav {
+		> li{
+			.ide-logout-btn{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			> a{
+				font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+				font-size: 13px;
+
+				&:before{
+					font-family: 'FontAwesome';
+					margin-right: 5px;
+				}
+			}
+			&.ide-logout-btn{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: #333;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
 .ga-ide {
 	background: #fff;
 	font-size: 14px;
@@ -305,6 +335,9 @@
 					}
 					.project-points{
 						color: #5988bb;
+					}
+					.keyboard-shortcut{
+						color: #3c763d;
 					}
 				}
 				&:after{
