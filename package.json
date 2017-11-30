@@ -21,8 +21,9 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "etch": "0.9.0",
     "font-awesome": "^4.7.0",
-    "etch": "0.9.0"
+    "lodash": "^4.17.4"
   },
   "standard": {
     "globals": [
