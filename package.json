@@ -16,7 +16,7 @@
     }
   },
   "deserializers": {
-    "SettingsView": "createSettingsView",
+    "DashboardView": "createDashboardView",
     "LoginView": "createLoginView"
   },
   "dependencies": {
